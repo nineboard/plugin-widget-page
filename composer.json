@@ -27,7 +27,10 @@
         "module/widgetpage@widgetpage": {
           "class": "Xpressengine\\Plugins\\WidgetPage\\Modules\\WidgetPage",
           "name": "WidgetPage",
-          "description": "XE Widget Page Module"
+          "description": "XE Widget Page Module",
+          "screenshot" : [
+            "/plugins/widget_page/assets/img/screenshot.png"
+          ]
         }
       }
     }
