@@ -17,7 +17,7 @@ use App\Http\Controllers\Controller;
 use XePresenter;
 use Xpressengine\Plugins\WidgetPage\Plugin;
 use Xpressengine\Routing\InstanceConfig;
-use Xpressengine\WidgetBox\WidgetBoxHandler;
+use Xpressengine\Widget\WidgetBoxHandler;
 
 /**
  * @category    WidgetPage
