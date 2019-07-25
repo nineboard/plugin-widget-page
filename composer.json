@@ -6,8 +6,8 @@
     "plugin",
     "widget"
   ],
-  "license": "LGPL-2.1",
-  "version": "1.0.0",
+  "license": "LGPL-3.0-or-later",
+  "version": "1.0.1",
   "type": "xpressengine-plugin",
   "support": {
     "email": "developers@xpressengine.com"
