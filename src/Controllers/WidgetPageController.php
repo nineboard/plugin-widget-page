@@ -42,10 +42,26 @@ class WidgetPageController extends Controller
 
     public function show(WidgetBoxHandler $handler)
     {
+        $siteTitle = $this->getSiteTitle();
+        \XeFrontend::title($siteTitle);
+
         $widgetboxPrefix = 'widgetpage-';
         $id = $widgetboxPrefix.$this->pageId;
 
         $widgetbox = $handler->find($id);
         return XePresenter::make(Plugin::view('views.show'), compact('widgetbox'));
+    }
+
+    private function getSiteTitle()
+    {
+        $siteTitle = \XeFrontend::output('title');
+
+        $instanceConfig = InstanceConfig::instance();
+        $menuItem = $instanceConfig->getMenuItem();
+
+        $title = xe_trans($menuItem['title']) . ' - ' . xe_trans($siteTitle);
+        $title = strip_tags(html_entity_decode($title));
+
+        return $title;
     }
 }
