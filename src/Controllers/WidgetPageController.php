@@ -5,12 +5,14 @@
  * PHP version 7
  *
  * @category
- * @package     Xpressengine\
+ *
  * @author      XE Team (developers) <developers@xpressengine.com>
  * @copyright   2019 Copyright XEHub Corp. <https://www.xehub.io>
  * @license     http://www.gnu.org/licenses/lgpl-3.0-standalone.html LGPL
+ *
  * @link        https://xpressengine.io
  */
+
 namespace Xpressengine\Plugins\WidgetPage\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -21,16 +23,17 @@ use Xpressengine\Widget\WidgetBoxHandler;
 
 /**
  * @category    WidgetPage
- * @package     Xpressengine\Plugins\WidgetPage\Controllers
+ *
  * @author      XE Team (developers) <developers@xpressengine.com>
  * @copyright   2019 Copyright XEHub Corp. <https://www.xehub.io>
  * @license     http://www.gnu.org/licenses/lgpl-3.0-standalone.html LGPL
+ *
  * @link        https://xpressengine.io
  */
 class WidgetPageController extends Controller
 {
     /**
-     * @var string $pageId page instance id
+     * @var string page instance id
      */
     protected $pageId;
 
@@ -49,6 +52,7 @@ class WidgetPageController extends Controller
         $id = $widgetboxPrefix.$this->pageId;
 
         $widgetbox = $handler->find($id);
+
         return XePresenter::make(Plugin::view('views.show'), compact('widgetbox'));
     }
 
@@ -59,7 +63,7 @@ class WidgetPageController extends Controller
         $instanceConfig = InstanceConfig::instance();
         $menuItem = $instanceConfig->getMenuItem();
 
-        $title = xe_trans($menuItem['title']) . ' - ' . xe_trans($siteTitle);
+        $title = xe_trans($menuItem['title']).' - '.xe_trans($siteTitle);
         $title = strip_tags(html_entity_decode($title));
 
         return $title;
