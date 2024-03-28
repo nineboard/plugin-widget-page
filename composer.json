@@ -1,5 +1,5 @@
 {
-  "name": "xpressengine-plugin/widget_page",
+  "name": "nineboard/plugin-widget-page",
   "description": "위젯페이지를 생성할 수 있는 플러그인입니다.",
   "keywords": [
     "xpressengine",
@@ -28,7 +28,7 @@
           "class": "Xpressengine\\Plugins\\WidgetPage\\Modules\\WidgetPage",
           "name": "Widget Page",
           "description": "XE Widget Page Module",
-          "screenshot" : [
+          "screenshot": [
             "/plugins/widget_page/assets/img/screenshot.png"
           ]
         }
